@@ -1,38 +1,7 @@
-# Pytest
+# Proyecto de Telemedicina
 
-## Instalación
+Plataforma de telemedicina desarrollada para conectar pacientes de zonas remotas del Perú con médicos especialistas de Lima y otras ciudades del país.
 
-```bash
-pip install pytest pytest-django pytest-cov faker
-```
+El objetivo del proyecto es brindar atención médica accesible y de calidad mediante consultas virtuales, facilitando el diagnóstico, seguimiento y tratamiento de pacientes que tienen acceso limitado a servicios especializados de salud.
 
-## Configuración `pytest.ini`
-
-```ini
-[pytest]
-DJANGO_SETTINGS_MODULE=django_telemedicina.settings
-python_files=tests.py test_*.py *_tests.py
-filterwarnings=ignore::DeprecationWarning
-```
-
-## Ejecución
-
-```bash
-pytest -v -rA -s
-# -v: Muestra el nombre de cada test y su resultado
-# -rA: Muestra un resumen detallado al final.
-# -s: Desactiva la captura stdout. Permite ver los print() que tengan en el codigo.
-```
-
-## Despliegue
-
-```env
-DB_NAME=''
-DB_USER=''
-DB_PASSWORD=''
-DB_HOST=''
-DB_PORT=''
-
-NUBEFACT_URL=''
-NUBEFACT_TOKEN=''
-```
+La plataforma permite gestionar pacientes, médicos, especialidades, citas médicas, historiales clínicos, recetas y archivos clínicos a través de una REST API desarrollada con Django y PostgreSQL.
